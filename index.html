@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.13.1/font/bootstrap-icons.css"
+      integrity="sha512-vWHsp0PuTxwRMLtGTnbS7PDNtI7yFmmiFq24hjcqpup/KK7ixxWdXwRmerG9gu7peaSRIVxpFcfBSVrGzWcF4w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Temperature Converter</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 35px;
+        box-sizing: border-box;
+        font-family: arial;
+        background-color: lightgoldenrodyellow;
+      }
+      section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        /* border: 5px solid red; */
+      }
+      h1 {
+        font-size: 50px;
+        text-align: center;
+        color: brown;
+        font-weight: bold;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0);
+        margin-bottom: 40px;
+      }
+      .parent-container {
+        border: 2px solid black;
+        padding: 20px;
+        height: 50vh;
+        max-width: 400px;
+        width: 100%;
+        flex: 1;
+      }
+      label {
+        font-size: 22px;
+      }
+      input {
+        width: 78%;
+        padding: 4px 4px 4px 8px;
+        border: 1px solid #ccc;
+        margin-bottom: 10px;
+        margin-top: 5px;
+      }
+      select {
+        width: 47%;
+        padding: 2px 0;
+        border: 1px solid #ccc;
+        font-size: 16px;
+        text-align: center;
+        margin-top: 4px;
+      }
+      button {
+        margin-top: 20px;
+        width: 100px;
+        padding: 8px;
+        font-size: 16px;
+        background-color: rgb(66, 8, 8);
+        color: white;
+        border: 1px solid black;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: rgb(108, 11, 11);
+      }
+      .new-container {
+        height: 30vh;
+        padding: 10px;
+        border: 2px dotted black;
+        flex: 1;
+        max-width: 200px;
+        width: 100%;
+        text-align: center;
+      }
+      .arrow {
+        transform: rotate(90deg);
+      }
+      .title-result {
+        color: brown;
+        font-size: 35px;
+        display: inline;
+        font-weight: bolder;
+      }
+      #result {
+        font-size: 18px;
+        line-height: 1.5;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Temperature Converter</h1>
+    <section>
+      <div class="parent-container">
+        <span>
+          <label for="temp">Enter Temperature</label> <br />
+          <input type="number" id="temp" />
+        </span>
+        <span>
+          <label for="convert">Convert to</label> <br />
+          <select name="items" id="convert">
+            <option value="default">Select</option>
+            <option value="celsius">Celsius</option>
+            <option value="fahrenheit">Fahrenheit</option>
+          </select>
+          <br />
+          <button id="btn-click">Convert</button>
+        </span>
+      </div>
+      <h2 class="arrow">
+        <i class="bi bi-arrow-right"></i>
+      </h2>
+      <div class="new-container">
+        <h2 class="title-result">Result</h2>
+        <p id="result"></p>
+      </div>
+    </section>
+    <!-- Js linking -->
+    <script src="script.js"></script>
+  </body>
+</html>
